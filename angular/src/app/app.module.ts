@@ -10,7 +10,8 @@ import { SelectshowComponent } from './selectshow/selectshow.component';
 import { LoginheaderComponent } from './loginheader/loginheader.component';
 import { MenuheaderComponent } from './menuheader/menuheader.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,9 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

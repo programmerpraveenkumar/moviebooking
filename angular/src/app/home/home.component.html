@@ -88,74 +88,21 @@
 
 <div class="review-slider">
     <ul id="flexiselDemo1">
-            <li>
-                <a href="movies.html"><img src="../../assets/images/r1.jpg" alt=""/></a>
+            <li *ngFor="let movie of movieList">
+                <a href="#"><img src="../../assets/images/r1.jpg" alt=""/></a>
                 <div class="slide-title">
-                    <h4>looked up one of the more Contrary to popular</h4>
+                    <h4>{{movie.name}}</h4>
                      </div>
                 <div class="date-city">
-                    <h5>Dec 12-15</h5>
-                    <h6>Multi-city</h6>
+                    <h5>{{movie.date_from}}}</h5>
+                    <h6>Total Seats:{{movie.total_seats}}</h6>
                     <div class="buy-tickets">
                         <a href="movie-select-show.html">BUY TICKETS</a>
                     </div>
                 </div>
             </li>
-            <li>
-                <a href="movies.html"><img src="../../assets/images/r2.jpg" alt=""/></a>
-                <div class="slide-title">
-                    <h4>There are many 'variations' belief</h4></div>
-                <div class="date-city">
-                    <h5>Dec 12-15</h5>
-                    <h6>Multi-city</h6>
-                    <div class="buy-tickets">
-                        <a href="movie-select-show.html">BUY TICKETS</a>
-                    </div>
-                </div>
-            </li>
-            < <li>
-                <a href="movies.html"><img src="../../assets/images/r3.jpg" alt=""/></a>
-                <div class="slide-title"><h4>Finibus Bonorum et Malorum more 'Contrary'</h4></div>
-                <div class="date-city">
-                    <h5>Dec 12-15</h5>
-                    <h6>Multi-city</h6>
-                    <div class="buy-tickets">
-                        <a href="movie-select-show.html">BUY TICKETS</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="movies.html"><img src="../../assets/images/r4.jpg" alt=""/></a>
-                <div class="slide-title"><h4>Lorem Ipsum is simply Bonorum</h4></div>
-                <div class="date-city">
-                    <h5>Dec 12-15</h5>
-                    <h6>Multi-city</h6>
-                    <div class="buy-tickets">
-                        <a href="movie-select-show.html">BUY TICKETS</a>
-                    </div>
-                </div>
-            </li>  <li>
-                    <a href="movies.html"><img src="../../assets/images/r5.jpg" alt=""/></a>
-                    <div class="slide-title"><h4>Lorem Ipsum is simply Bonorum</h4></div>
-                    <div class="date-city">
-                        <h5>Dec 12-15</h5>
-                        <h6>Multi-city</h6>
-                        <div class="buy-tickets">
-                            <a href="movie-select-show.html">BUY TICKETS</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="movies.html"><img src="../../assets/images/r6.jpg" alt=""/></a>
-                    <div class="slide-title"><h4>Lorem Ipsum is simply Bonorum</h4></div>
-                    <div class="date-city">
-                        <h5>Dec 12-15</h5>
-                        <h6>Multi-city</h6>
-                        <div class="buy-tickets">
-                            <a href="movie-select-show.html">BUY TICKETS</a>
-                        </div>
-                    </div>
-                </li> 
+            
+            
 </ul>
 
 </div>
@@ -381,90 +328,29 @@
             <div class="featured">
                 <h4>Featured</h4>
                 <ul>
-                    <li>
+                    
+                  
+
+                    <li *ngFor="let movie of movieList">
                         <div class="f-movie">
                             <div class="f-movie-img">
                                 <a href="movies.html"><img src="../../assets/images/f4.jpg" alt="" /></a>
                             </div>
                                 <div class="f-movie-name">
-                                    <a href="movies.html">Lorem Ipsum used since</a>
+                                    <a href="movies.html">{{movie.name}}</a>
                                     <p>Multi city</p>
+                                    <h5>{{movie.date_from}}}</h5>
+                                    <h6>Total Seats:{{movie.total_seats}}</h6>
                                 </div>
                             <div class="f-buy-tickets">
                                 <a href="movie-select-show.html">BUY TICKETS</a>
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="f-movie">
-                            <div class="f-movie-img">
-                                <a href="movies.html"><img src="../../assets/images/f5.jpg" alt="" /></a>
-                            </div>
-                                <div class="f-movie-name">
-                                    <a href="movies.html">looked up one of more</a>
-                                    <p>Multi city</p>
-                                </div>
-                            <div class="f-buy-tickets">
-                                <a href="movie-select-show.html">BUY TICKETS</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-movie">
-                            <div class="f-movie-img">
-                                <a href="movies.html"><img src="../../assets/images/f6.jpg" alt="" /></a>
-                            </div>
-                                <div class="f-movie-name">
-                                    <a href="movies.html">The Live Lorem Ipsum </a>
-                                    <p>Mumbai</p>
-                                </div>
-                            <div class="f-buy-tickets">
-                                <a href="movie-select-show.html">BUY TICKETS</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-movie">
-                            <div class="f-movie-img">
-                                <a href="movies.html"><img src="../../assets/images/f1.jpg" alt=""></a>
-                            </div>
-                                <div class="f-movie-name">
-                                    <a href="movies.html">The standard chunk</a>
-                                    <p>Multi city</p>
-                                </div>
-                            <div class="f-buy-tickets">
-                                <a href="movie-select-show.html">BUY TICKETS</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-movie">
-                            <div class="f-movie-img">
-                                <a href="movies.html"><img src="../../assets/images/f2.jpg" alt=""></a>
-                            </div>
-                                <div class="f-movie-name">
-                                    <a href="movies.html">There are many 'variations'</a>
-                                    <p>Multi city</p>
-                                </div>
-                            <div class="f-buy-tickets">
-                                <a href="movie-select-show.html">BUY TICKETS</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-movie">
-                            <div class="f-movie-img">
-                                <a href="movies.html"><img src="../../assets/images/f3.jpg" alt=""></a>
-                            </div>
-                                <div class="f-movie-name">
-                                    <a href="movies.html">The Live Tribute Show</a>
-                                    <p>Mumbai</p>
-                                </div>								 
-                            <div class="f-buy-tickets">
-                                <a href="movie-select-show.html">BUY TICKETS</a>
-                            </div>
-                        </div>
-                    </li>
+                    
+                    
+                
+                    
                     <div class="clearfix"></div>
                 </ul>
             </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpApiService } from '../http-api.service';
+import { BookingService } from '../booking.service';
 
 @Component({
   selector: 'app-menuheader',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuheaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:HttpApiService,private bookingService:BookingService) { }
 
   ngOnInit() {
   }
+  
 
 }
