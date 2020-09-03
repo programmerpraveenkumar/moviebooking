@@ -15,13 +15,15 @@ export class HomeComponent implements OnInit {
     console.log("inside home component")
     this.getAllMovie();
   }
-  getAllMovie(){
-  //
-  
-  this.apiService.POST("theatre/getByMovie","MOVIE1").subscribe(res=>{
-    this.movieList = res;
-  },error=>{
-    alert(error.error.message)
-  })
+  getAllMovie(){    
+  if(this.bookingService.checkToken()){
+    this.apiService.POST("theatre/getRunningShowsByTheatreId","2").subscribe(res=>{
+      this.movieList = res;
+    },error=>{
+      alert(error.error.message)
+    })
+    }
   }
+  
+ 
 }
