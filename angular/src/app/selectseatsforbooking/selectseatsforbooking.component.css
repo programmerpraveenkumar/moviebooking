@@ -1,0 +1,16 @@
+.seats{
+    font-size: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+.seats:hover{
+    color:#6b6464;
+}
+.seats.booked{
+    cursor: default;
+    color: red;
+}
+.seats.currentBooking{
+    cursor: default;
+    color:green;
+}   

@@ -1,0 +1,40 @@
+<app-loginheader></app-loginheader>
+
+  
+  <div class="m-single-article">
+		<div class="article-left">
+			<div *ngFor="let seatRow of seatRowsArray">			
+			<i *ngFor="let seatcolumn of seatRow" (click)="seatSelection(seatcolumn)" [ngClass]="{'booked':seatcolumn.isBooked,'currentBooking':seatcolumn.currentBooked}" class="seats  fa fa-user" aria-hidden="true">{{seatcolumn.seatNo}}</i>
+			</div>
+<p>
+	<a  (click)="startBooking()"class="m-green" >Book for movie</a>
+	
+</p>
+<div class="clearfix"></div>
+			<div class="article-time-strip">
+				
+				<div class="clearfix"></div>
+				<div class="article-img">
+							
+				</div>
+				
+			</div>
+			<!-- <h3>{{movie_Name}} <span> <i class="fa fa-heart"></i> 99%</span></h3>
+			<p><a class="m-green" href="#">Action</a><a class="m-green" href="#">Thriller</a><a class="m-orange" href="#">English</a></p>
+<div class="clearfix"></div>
+			<div class="article-time-strip">
+				
+				<div class="clearfix"></div>
+				<div class="article-img">
+							
+				</div>
+				
+			</div> -->
+
+			 
+		</div>
+		
+		<div class="clearfix"></div>
+  </div>
+  
+  <app-footer></app-footer>

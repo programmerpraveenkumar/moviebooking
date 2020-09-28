@@ -18,7 +18,7 @@
   
   <div class="m-single-article">
 		<div class="article-left">
-			<h3>Baahubali Trailer || Prabhas, Rana Daggubati, Anushka, Tamannaah || Bahubali Trailer <span> <i class="fa fa-heart"></i> 99%</span></h3>
+			<h3>{{movie_Name}} <span> <i class="fa fa-heart"></i> 99%</span></h3>
 			<p><a class="m-green" href="#">Action</a><a class="m-green" href="#">Thriller</a><a class="m-orange" href="#">English</a></p>
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
@@ -30,7 +30,7 @@
 					<iframe src="https://www.youtube.com/embed/VdafjyFK3ko" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="review-info">
-								<h6 class="span88">Baahubali</h6>
+								<h6 class="span88">{{movie_Name}}</h6>
 								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
 								<p class="ratingview">Critic's Rating:</p>
 								<div class="rating">
@@ -74,8 +74,8 @@
 									</div>
 									<div class="clearfix"></div>
 								</div>
-								<p class="info"><strong>CAST</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prabhas, Rana Daggubati, Anushka, Tamannaah.</p>
-								<p class="info"><strong>DIRECTION</strong>: &nbsp;&nbsp;&nbsp;&nbsp;S.S. Rajamouli.</p>
+								<p class="info"><strong>Booked Seats</strong>{{bookedSeats}}</p>
+								<p class="info"><strong>Available Seats</strong>{{avaialableSeats}}</p>
 								<p class="info"><strong>STORY</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V. Vijayendra Prasad.</p>
 								<p class="info"><strong>DURATION</strong>:&nbsp;&nbsp;&nbsp; &nbsp; 2 hour 30 minutes.</p>
 							</div>
@@ -90,10 +90,16 @@
 			</ul>
 			<div id="myTabContent" class="tab-content">
 			  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">				  
-                 <p class="m-s-t">INOX: Lorem Mall, Chicago</p>
+                 <p class="m-s-t">{{theatre_name}}</p>
 				 <a class="show-time" href="movie-select-show.html">06:30 PM</a>
-				 <div class="clearfix"></div>
-				  <a class="more-show-time" href="movie-select-show.html">Book this movie</a>
+					<div class="clearfix"></div>
+					<!--  -->
+					<div>
+						<label>Enter the count</label>
+						<input type="text" placeholder="Type count" [(ngModel)]="book_user_count"/>
+					</div>
+					
+				  <a  class="more-show-time" [ngClass]="{'disable':avaialableSeats <= 0}" (click)="bookMovie()" >Book this movie</a>
 			  </div>
 			  <!-- <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 				 <p class="m-s-t">INOX: Lorem Mall, Chicago</p>

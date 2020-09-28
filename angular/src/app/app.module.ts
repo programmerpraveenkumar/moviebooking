@@ -12,6 +12,9 @@ import { MenuheaderComponent } from './menuheader/menuheader.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SelectseatsforbookingComponent } from './selectseatsforbooking/selectseatsforbooking.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +24,15 @@ import { FormsModule } from '@angular/forms';
     SelectshowComponent,
     LoginheaderComponent,
     MenuheaderComponent,
-    FooterComponent
+    FooterComponent,
+    SelectseatsforbookingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,AngularFontAwesomeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -30,7 +30,9 @@ export class LoginheaderComponent implements OnInit {
       "password":this.login.pwd
     }
     console.log(request);
-    this.apiService.POST("user/login",request).subscribe(res=>{      
+    this.apiService.POST("user/userlogin",request).subscribe(res=>{      
+     // this.apiService.POST("login/userlogin",request).subscribe(res=>{      
+      
       this.bookingService.storeToken(CONSTANTS.USER_ID_TOKEN,res['id']);
       this.bookingService.storeToken(CONSTANTS.TOKEN_ID_TOKEN,res['token']);
       window.location.reload();//for hiding login popup 

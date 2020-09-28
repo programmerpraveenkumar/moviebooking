@@ -1,0 +1,8 @@
+a.more-show-time.disable {
+    cursor: default;
+    opacity: 0.2;
+}
+a.more-show-time.disable:hover{
+    background-color: #003B64;
+    color: #fff;
+}
